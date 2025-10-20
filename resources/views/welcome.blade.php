@@ -105,55 +105,109 @@
                 <!-- Right Column - Visual Element -->
                 <div class="lg:col-span-5 flex justify-center lg:justify-end">
                     <div class="relative">
-                        <!-- Main Circle -->
+                        <!-- Video Container -->
                         <div class="relative w-80 h-80 lg:w-96 lg:h-96">
-                            <!-- Rotating Border -->
-                            <div class="absolute inset-0 rounded-full border-4 border-dashed border-yellow-400/30 animate-spin-slow"></div>
 
-                            <!-- Inner Circle -->
-                            <div class="absolute inset-4 bg-gradient-to-br from-emerald-600/20 to-teal-600/20 backdrop-blur-sm rounded-full border border-emerald-400/30 flex items-center justify-center">
+                            <!-- Decorative rotating border -->
+                            <div class="absolute inset-0 rounded-3xl border-4 border-dashed border-yellow-400/20 animate-spin-slow"></div>
 
-                                <!-- Center Icon -->
-                                <div class="relative">
-                                    <!-- Trophy/Cup Icon -->
-                                    <div class="w-32 h-32 lg:w-40 lg:h-40 flex items-center justify-center">
-                                        <svg class="w-full h-full text-yellow-400" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <!-- Cup Base -->
-                                            <rect x="25" y="70" width="50" height="8" rx="4" fill="currentColor"/>
-                                            <rect x="30" y="65" width="40" height="8" rx="4" fill="currentColor"/>
+                            <!-- Main video container -->
+                            <div class="absolute inset-4 bg-gradient-to-br from-emerald-900/90 to-teal-900/90 backdrop-blur-sm rounded-2xl border border-emerald-400/20 overflow-hidden shadow-2xl">
 
-                                            <!-- Cup Body -->
-                                            <path d="M30 20 L70 20 L65 60 L35 60 Z" fill="currentColor"/>
+                                <!-- YouTube Video Embed -->
+                                <div class="relative w-full h-full group cursor-pointer" onclick="playVideo(this)">
 
-                                            <!-- Handles -->
-                                            <path d="M20 25 Q15 25 15 30 L15 40 Q15 45 20 45" stroke="currentColor" stroke-width="3" fill="none"/>
-                                            <path d="M80 25 Q85 25 85 30 L85 40 Q85 45 80 45" stroke="currentColor" stroke-width="3" fill="none"/>
+                                    <!-- Video Thumbnail/Placeholder -->
+                                    <div class="absolute inset-0 bg-gradient-to-br from-emerald-800 to-emerald-900 flex items-center justify-center">
+                                        <div class="text-center">
+                                            <!-- Play Button -->
+                                            <div class="w-20 h-20 lg:w-24 lg:h-24 bg-red-600 rounded-full flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform shadow-lg">
+                                                <svg class="w-8 h-8 lg:w-10 lg:h-10 text-white ml-1" fill="currentColor" viewBox="0 0 24 24">
+                                                    <path d="M8 5v14l11-7z"/>
+                                                </svg>
+                                            </div>
 
-                                            <!-- Islamic Pattern on Cup -->
-                                            <polygon points="50,25 55,35 45,35" fill="#065f46" opacity="0.3"/>
-                                            <polygon points="50,50 45,40 55,40" fill="#065f46" opacity="0.3"/>
+                                            <!-- Video Title -->
+                                            <h4 class="text-white font-bold text-lg lg:text-xl mb-2">Islamic Cup 2024</h4>
+                                            <p class="text-emerald-200 text-sm lg:text-base">Höjdpunkter & Gemenskap</p>
 
-                                            <!-- Glow Effect -->
-                                            <circle cx="50" cy="15" r="3" fill="currentColor" opacity="0.8">
-                                                <animate attributeName="opacity" values="0.8;0.3;0.8" dur="2s" repeatCount="indefinite"/>
-                                            </circle>
-                                        </svg>
+                                            <!-- Duration badge -->
+                                            <div class="absolute bottom-4 right-4 bg-black/80 text-white text-xs px-2 py-1 rounded">
+                                                3:45
+                                            </div>
+                                        </div>
+
+                                        <!-- YouTube Logo -->
+                                        <div class="absolute top-4 left-4 flex items-center space-x-2">
+                                            <div class="w-8 h-8 bg-red-600 rounded-sm flex items-center justify-center">
+                                                <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                                    <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                                                </svg>
+                                            </div>
+                                            <span class="text-white text-xs font-medium">YouTube</span>
+                                        </div>
+
+                                        <!-- Islamic Cup Branding -->
+                                        <div class="absolute bottom-4 left-4 flex items-center space-x-2">
+                                            <div class="w-6 h-6 bg-yellow-400 rounded-full flex items-center justify-center">
+                                                <svg class="w-4 h-4 text-emerald-900" viewBox="0 0 24 24" fill="currentColor">
+                                                    <path d="M12 2L15.09 8.26L22 9L17 14L18.18 21L12 17.77L5.82 21L7 14L2 9L8.91 8.26L12 2Z"/>
+                                                </svg>
+                                            </div>
+                                            <span class="text-emerald-200 text-xs font-medium">Islamic Cup</span>
+                                        </div>
+
+                                        <!-- Hover overlay -->
+                                        <div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                                     </div>
 
-                                    <!-- Floating Elements -->
-                                    <div class="absolute -top-4 -right-4 w-8 h-8 bg-yellow-400/20 rounded-full animate-bounce"></div>
-                                    <div class="absolute -bottom-2 -left-6 w-6 h-6 border-2 border-emerald-400/40 rounded-full animate-pulse"></div>
-                                    <div class="absolute top-1/2 -right-8 w-4 h-4 bg-emerald-400/30 rotate-45"></div>
+                                    <!-- Actual YouTube iframe (hidden initially) -->
+                                    <iframe
+                                        class="hidden absolute inset-0 w-full h-full rounded-2xl"
+                                        src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1&rel=0&showinfo=0&modestbranding=1"
+                                        title="Islamic Cup 2024 Highlights"
+                                        frameborder="0"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                        allowfullscreen>
+                                    </iframe>
                                 </div>
+                            </div>
+
+                            <!-- Floating decorative elements -->
+                            <div class="absolute -top-4 -right-4 w-8 h-8 bg-red-500/20 rounded-full animate-bounce" style="animation-delay: 0.5s;"></div>
+                            <div class="absolute -bottom-6 -left-6 w-12 h-12 border-2 border-yellow-400/40 rounded-full animate-pulse"></div>
+                            <div class="absolute top-1/2 -right-8 w-6 h-6 bg-emerald-400/30 rotate-45 animate-float"></div>
+
+                            <!-- Orbiting elements -->
+                            <div class="absolute inset-0 animate-spin-reverse pointer-events-none">
+                                <div class="absolute top-12 left-1/2 w-3 h-3 bg-red-400/60 rounded-full transform -translate-x-1/2"></div>
+                                <div class="absolute bottom-12 left-1/2 w-2 h-2 bg-yellow-400/60 rounded-full transform -translate-x-1/2"></div>
+                                <div class="absolute left-12 top-1/2 w-2 h-2 bg-emerald-400/60 rounded-full transform -translate-y-1/2"></div>
+                                <div class="absolute right-12 top-1/2 w-3 h-3 bg-red-400/40 rounded-full transform -translate-y-1/2"></div>
                             </div>
                         </div>
 
-                        <!-- Orbiting Elements -->
-                        <div class="absolute inset-0 animate-spin-reverse">
-                            <div class="absolute top-8 left-1/2 w-4 h-4 bg-yellow-400/60 rounded-full transform -translate-x-1/2"></div>
-                            <div class="absolute bottom-8 left-1/2 w-3 h-3 bg-emerald-400/60 rounded-full transform -translate-x-1/2"></div>
-                            <div class="absolute left-8 top-1/2 w-2 h-2 bg-teal-400/60 rounded-full transform -translate-y-1/2"></div>
-                            <div class="absolute right-8 top-1/2 w-3 h-3 bg-yellow-400/40 rounded-full transform -translate-y-1/2"></div>
+                        <!-- Video Stats/Info -->
+                        <div class="absolute -bottom-8 left-4 right-4 bg-white/10 backdrop-blur-sm rounded-xl p-3 border border-white/20">
+                            <div class="flex justify-between items-center text-sm">
+                                <div class="flex items-center space-x-4 text-emerald-200">
+                    <span class="flex items-center space-x-1">
+                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M8 5v14l11-7z"/>
+                        </svg>
+                        <span>125K</span>
+                    </span>
+                                    <span class="flex items-center space-x-1">
+                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M2 20h2c.55 0 1-.45 1-1v-9c0-.55-.45-1-1-1H2v11zm19.83-7.12c.11-.25.17-.52.17-.8V11c0-1.1-.9-2-2-2h-5.5l.92-4.65c.05-.22.02-.46-.08-.66-.23-.45-.52-.86-.88-1.22L14 2 7.59 8.41C7.21 8.79 7 9.3 7 9.83v7.84C7 18.95 8.05 20 9.34 20h8.11c.7 0 1.36-.37 1.72-.97l2.66-6.15z"/>
+                        </svg>
+                        <span>2.1K</span>
+                    </span>
+                                </div>
+                                <div class="text-emerald-300 text-xs">
+                                    Islamic Cup Official
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -555,149 +609,318 @@
         </div>
     </section>
 
+
     <!-- Aktiviteter Section -->
-    <section id="aktiviteter" class="py-20 bg-gray-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-                    Familje<span class="text-emerald-600">aktiviteter</span>
+    <section id="aktiviteter" class="py-20 bg-gradient-to-b from-gray-50 to-white relative overflow-hidden">
+        <!-- Subtle background pattern -->
+        <div class="absolute inset-0 opacity-5">
+            <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <pattern id="activity-pattern" x="0" y="0" width="100" height="100" patternUnits="userSpaceOnUse">
+                        <circle cx="50" cy="25" r="8" fill="currentColor"/>
+                        <circle cx="25" cy="75" r="6" fill="currentColor"/>
+                        <circle cx="75" cy="75" r="7" fill="currentColor"/>
+                    </pattern>
+                </defs>
+                <rect width="100%" height="100%" fill="url(#activity-pattern)" class="text-emerald-600"/>
+            </svg>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+            <div class="text-center mb-20">
+                <!-- Decorative elements -->
+                <div class="inline-flex items-center space-x-3 mb-6">
+                    <div class="w-12 h-0.5 bg-emerald-600"></div>
+                    <div class="w-3 h-3 bg-yellow-400 rounded-full"></div>
+                    <div class="w-12 h-0.5 bg-emerald-600"></div>
+                </div>
+
+                <h2 class="text-4xl md:text-6xl font-bold text-gray-900 mb-4">
+                <span class="block text-2xl md:text-3xl text-emerald-600 font-normal mb-2">
+                    För hela familjen
+                </span>
+                    Familje<span class="text-emerald-600 relative inline-block">
+                    aktiviteter
+                    <svg class="absolute -bottom-2 left-0 w-full h-4 text-emerald-600/40" viewBox="0 0 200 20" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0 12 Q50 6 100 10 T200 8" stroke="currentColor" stroke-width="3" fill="none"/>
+                    </svg>
+                </span>
                 </h2>
-                <div class="w-24 h-1 bg-emerald-600 mx-auto mb-6"></div>
-                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-                    Något för alla i familjen - från barn till vuxna
+
+                <p class="text-xl md:text-2xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
+                    Något för alla i familjen - från <span class="text-emerald-600 font-semibold">barn</span> till <span class="text-emerald-600 font-semibold">vuxna</span>
                 </p>
             </div>
 
-            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-                <!-- Activity 1 -->
-                <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
-                    <div class="h-48 bg-gradient-to-br from-emerald-400 to-emerald-600 flex items-center justify-center">
-                        <svg class="w-24 h-24 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
-                        </svg>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Activity 1 - Föreläsningar -->
+                <div class="group bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:scale-105">
+                    <div class="relative h-56 overflow-hidden">
+                        <img
+                            src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=300&fit=crop&crop=center"
+                            alt="Islamisk föreläsning med imam som talar till publik"
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                            loading="lazy"
+                        >
+                        <!-- Gradient overlay -->
+                        <div class="absolute inset-0 bg-gradient-to-t from-emerald-900/60 via-transparent to-transparent"></div>
+
+                        <!-- Category badge -->
+                        <div class="absolute top-4 left-4 bg-emerald-600/90 backdrop-blur-sm text-white px-3 py-1 rounded-full text-sm font-medium">
+                            Föreläsningar
+                        </div>
+
+                        <!-- Decorative icon overlay -->
+                        <div class="absolute bottom-4 right-4 w-12 h-12 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center">
+                            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
+                            </svg>
+                        </div>
                     </div>
                     <div class="p-6">
-                        <h3 class="text-xl font-bold text-gray-900 mb-2">Föreläsningar</h3>
-                        <p class="text-gray-600">Inspirerande tal från kunniga föreläsare om Islam och samhälle</p>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3 group-hover:text-emerald-600 transition-colors">Inspirerande Föreläsningar</h3>
+                        <p class="text-gray-600 leading-relaxed">Kunniga föreläsare delar värdefull kunskap om Islam, familjeliv och samhälle</p>
                     </div>
                 </div>
 
-                <!-- Activity 2 -->
-                <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
-                    <div class="h-48 bg-gradient-to-br from-yellow-400 to-yellow-600 flex items-center justify-center">
-                        <svg class="w-24 h-24 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
-                        </svg>
+                <!-- Activity 2 - Barnaktiviteter -->
+                <div class="group bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:scale-105">
+                    <div class="relative h-56 overflow-hidden">
+                        <img
+                            src="https://images.unsplash.com/photo-1560785496-3c9d27877182?w=400&h=300&fit=crop&crop=center"
+                            alt="Barn som leker och har roligt med aktiviteter"
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                            loading="lazy"
+                        >
+                        <!-- Gradient overlay -->
+                        <div class="absolute inset-0 bg-gradient-to-t from-yellow-600/60 via-transparent to-transparent"></div>
+
+                        <!-- Category badge -->
+                        <div class="absolute top-4 left-4 bg-yellow-500/90 backdrop-blur-sm text-white px-3 py-1 rounded-full text-sm font-medium">
+                            Barnaktiviteter
+                        </div>
+
+                        <!-- Decorative icon overlay -->
+                        <div class="absolute bottom-4 right-4 w-12 h-12 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center">
+                            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                            </svg>
+                        </div>
                     </div>
                     <div class="p-6">
-                        <h3 class="text-xl font-bold text-gray-900 mb-2">Barnaktiviteter</h3>
-                        <p class="text-gray-600">Roliga lekar, tävlingar och aktiviteter för de yngsta</p>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3 group-hover:text-yellow-600 transition-colors">Roliga Barnaktiviteter</h3>
+                        <p class="text-gray-600 leading-relaxed">Lekar, tävlingar och kreativa aktiviteter som får de yngsta att skratta och lära</p>
                     </div>
                 </div>
 
-                <!-- Activity 3 -->
-                <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
-                    <div class="h-48 bg-gradient-to-br from-emerald-400 to-emerald-600 flex items-center justify-center">
-                        <svg class="w-24 h-24 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"/>
-                        </svg>
+                <!-- Activity 3 - Mat & Catering -->
+                <div class="group bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:scale-105">
+                    <div class="relative h-56 overflow-hidden">
+                        <img
+                            src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=400&h=300&fit=crop&crop=center"
+                            alt="Vackert upplagd halalmat och måltider"
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                            loading="lazy"
+                        >
+                        <!-- Gradient overlay -->
+                        <div class="absolute inset-0 bg-gradient-to-t from-emerald-800/60 via-transparent to-transparent"></div>
+
+                        <!-- Category badge -->
+                        <div class="absolute top-4 left-4 bg-emerald-500/90 backdrop-blur-sm text-white px-3 py-1 rounded-full text-sm font-medium">
+                            Mat & Catering
+                        </div>
+
+                        <!-- Decorative icon overlay -->
+                        <div class="absolute bottom-4 right-4 w-12 h-12 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center">
+                            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"/>
+                            </svg>
+                        </div>
                     </div>
                     <div class="p-6">
-                        <h3 class="text-xl font-bold text-gray-900 mb-2">Mat & Catering</h3>
-                        <p class="text-gray-600">Halalmat och förfriskningar för alla deltagare</p>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3 group-hover:text-emerald-600 transition-colors">Halalmat & Förfriskningar</h3>
+                        <p class="text-gray-600 leading-relaxed">Utsökt halalmat och läskande drycker för alla deltagare och familjer</p>
                     </div>
                 </div>
 
-                <!-- Activity 4 -->
-                <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
-                    <div class="h-48 bg-gradient-to-br from-yellow-400 to-yellow-600 flex items-center justify-center">
-                        <svg class="w-24 h-24 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v13m0-13V6a2 2 0 112 2h-2zm0 0V5.5A2.5 2.5 0 109.5 8H12zm-7 4h14M5 12a2 2 0 110-4h14a2 2 0 110 4M5 12v7a2 2 0 002 2h10a2 2 0 002-2v-7"/>
-                        </svg>
+                <!-- Activity 4 - Presenter & Priser -->
+                <div class="group bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:scale-105">
+                    <div class="relative h-56 overflow-hidden">
+                        <img
+                            src="https://images.unsplash.com/photo-1567427017947-545c5f8d16ad?w=400&h=300&fit=crop&crop=center"
+                            alt="Gyllene pokaler och utmärkelser på podium"
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                            loading="lazy"
+                        >
+                        <!-- Gradient overlay -->
+                        <div class="absolute inset-0 bg-gradient-to-t from-yellow-700/60 via-transparent to-transparent"></div>
+
+                        <!-- Category badge -->
+                        <div class="absolute top-4 left-4 bg-yellow-600/90 backdrop-blur-sm text-white px-3 py-1 rounded-full text-sm font-medium">
+                            Priser & Utmärkelser
+                        </div>
+
+                        <!-- Decorative icon overlay -->
+                        <div class="absolute bottom-4 right-4 w-12 h-12 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center">
+                            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v13m0-13V6a2 2 0 112 2h-2zm0 0V5.5A2.5 2.5 0 109.5 8H12zm-7 4h14M5 12a2 2 0 110-4h14a2 2 0 110 4M5 12v7a2 2 0 002 2h10a2 2 0 002-2v-7"/>
+                            </svg>
+                        </div>
                     </div>
                     <div class="p-6">
-                        <h3 class="text-xl font-bold text-gray-900 mb-2">Presenter & Priser</h3>
-                        <p class="text-gray-600">Pokaler, medaljer och priser för vinnare och deltagare</p>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3 group-hover:text-yellow-600 transition-colors">Presenter & Priser</h3>
+                        <p class="text-gray-600 leading-relaxed">Pokaler, medaljer och minnesgåvor för alla vinnare och deltagare</p>
                     </div>
                 </div>
+            </div>
+
+            <!-- Bottom Call to Action -->
+            <div class="text-center mt-16">
+                <div class="inline-flex items-center space-x-2 bg-emerald-50 border border-emerald-200 rounded-full px-6 py-3 mb-6">
+                    <div class="w-2 h-2 bg-emerald-500 rounded-full animate-pulse"></div>
+                    <span class="text-emerald-700 font-medium">Alla aktiviteter ingår i deltagaravgiften</span>
+                </div>
+
+                <a href="#kontakt" class="group relative inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-emerald-600 to-emerald-700 hover:from-emerald-700 hover:to-emerald-800 text-white font-semibold rounded-2xl transition-all duration-300 transform hover:scale-105 shadow-lg">
+                    <svg class="w-5 h-5 mr-2 group-hover:rotate-12 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/>
+                    </svg>
+                    Frågor om aktiviteterna?
+                    <div class="absolute inset-0 bg-white/20 rounded-2xl transform scale-95 group-hover:scale-100 transition-transform opacity-0 group-hover:opacity-100"></div>
+                </a>
             </div>
         </div>
     </section>
 
     <!-- Senaste Nyheter Section -->
+
+    <!-- Senaste Nyheter Section -->
     <section id="nyheter" class="py-20 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
-                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-                    Senaste <span class="text-emerald-600">Nyheterna</span>
+                <h2 class="text-4xl md:text-6xl font-bold text-gray-900 mb-4">
+                    <span class="block text-2xl md:text-3xl text-emerald-600 font-normal mb-2">
+                        Håll dig uppdaterad
+                    </span>
+                                Senaste <span class="text-emerald-600 relative inline-block">
+                        Nyheterna
+                        <svg class="absolute -bottom-2 left-0 w-full h-4 text-emerald-600/40" viewBox="0 0 200 20" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0 12 Q50 6 100 10 T200 8" stroke="currentColor" stroke-width="3" fill="none"/>
+                        </svg>
+                    </span>
                 </h2>
-                <div class="w-24 h-1 bg-emerald-600 mx-auto mb-6"></div>
                 <p class="text-xl text-gray-600 max-w-3xl mx-auto">
                     Håll dig uppdaterad med de senaste nyheterna från Islamic Cup
                 </p>
             </div>
 
             <div class="grid md:grid-cols-3 gap-8">
-                <!-- News Item 1 -->
-                <article class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow group">
-                    <div class="h-56 bg-gradient-to-br from-emerald-500 to-emerald-700 overflow-hidden">
-                        <div class="w-full h-full flex items-center justify-center bg-emerald-600/50 group-hover:scale-110 transition-transform duration-300">
-                            <svg class="w-20 h-20 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5.882V19.24a1.76 1.76 0 01-3.417.592l-2.147-6.15M18 13a3 3 0 100-6M5.436 13.683A4.001 4.001 0 017 6h1.832c4.1 0 7.625-1.234 9.168-3v14c-1.543-1.766-5.067-3-9.168-3H7a3.988 3.988 0 01-1.564-.317z"/>
-                            </svg>
+                <!-- News Item 1 - Anmälan öppen -->
+                <article class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 group transform hover:scale-105">
+                    <div class="relative h-56 overflow-hidden">
+                        <img
+                            src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=400&h=300&fit=crop&crop=center"
+                            alt="Person som skriver anmälan på dator"
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                            loading="lazy"
+                        >
+                        <!-- Gradient overlay -->
+                        <div class="absolute inset-0 bg-gradient-to-t from-emerald-900/70 via-emerald-700/20 to-transparent"></div>
+
+                        <!-- Category badge -->
+                        <div class="absolute top-4 left-4 bg-emerald-600/90 backdrop-blur-sm text-white px-3 py-2 rounded-full text-sm font-medium">
+                            Anmälan
+                        </div>
+
+                        <!-- Date badge -->
+                        <div class="absolute bottom-4 right-4 bg-white/20 backdrop-blur-sm text-white px-3 py-1 rounded-lg text-xs font-medium">
+                            15 Jan 2025
                         </div>
                     </div>
                     <div class="p-6">
                         <span class="text-sm text-emerald-600 font-semibold">15 Januari 2025</span>
-                        <h3 class="text-xl font-bold text-gray-900 mt-2 mb-3">Anmälan öppen för Islamic Cup 2025</h3>
-                        <p class="text-gray-600 mb-4">Nu kan ni anmäla era lag till årets turnering. Begränsat antal platser - anmäl er snarast!</p>
-                        <a href="#" class="text-emerald-600 font-semibold hover:text-emerald-700 inline-flex items-center">
+                        <h3 class="text-xl font-bold text-gray-900 mt-2 mb-3 group-hover:text-emerald-600 transition-colors">Anmälan öppen för Islamic Cup 2025</h3>
+                        <p class="text-gray-600 mb-4 leading-relaxed">Nu kan ni anmäla era lag till årets turnering. Begränsat antal platser - anmäl er snarast!</p>
+                        <a href="#" class="text-emerald-600 font-semibold hover:text-emerald-700 inline-flex items-center group/link">
                             Läs mer
-                            <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <svg class="w-4 h-4 ml-2 group-hover/link:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
                             </svg>
                         </a>
                     </div>
                 </article>
 
-                <!-- News Item 2 -->
-                <article class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow group">
-                    <div class="h-56 bg-gradient-to-br from-yellow-400 to-yellow-600 overflow-hidden">
-                        <div class="w-full h-full flex items-center justify-center bg-yellow-600/50 group-hover:scale-110 transition-transform duration-300">
-                            <svg class="w-20 h-20 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
-                            </svg>
+                <!-- News Item 2 - Datum presenterat -->
+                <article class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 group transform hover:scale-105">
+                    <div class="relative h-56 overflow-hidden">
+                        <img
+                            src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400&h=300&fit=crop&crop=center"
+                            alt="Kalender som visar viktigt datum markerat"
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                            loading="lazy"
+                        >
+                        <!-- Gradient overlay -->
+                        <div class="absolute inset-0 bg-gradient-to-t from-yellow-900/70 via-yellow-600/20 to-transparent"></div>
+
+                        <!-- Category badge -->
+                        <div class="absolute top-4 left-4 bg-yellow-500/90 backdrop-blur-sm text-white px-3 py-2 rounded-full text-sm font-medium">
+                            Datum
+                        </div>
+
+                        <!-- Date badge -->
+                        <div class="absolute bottom-4 right-4 bg-white/20 backdrop-blur-sm text-white px-3 py-1 rounded-lg text-xs font-medium">
+                            10 Jan 2025
                         </div>
                     </div>
                     <div class="p-6">
                         <span class="text-sm text-yellow-600 font-semibold">10 Januari 2025</span>
-                        <h3 class="text-xl font-bold text-gray-900 mt-2 mb-3">Datum för 2025 presenterat</h3>
-                        <p class="text-gray-600 mb-4">Vi har nu fastställt datum och plats för Islamic Cup 2025. Spara datumet!</p>
-                        <a href="#" class="text-yellow-600 font-semibold hover:text-yellow-700 inline-flex items-center">
+                        <h3 class="text-xl font-bold text-gray-900 mt-2 mb-3 group-hover:text-yellow-600 transition-colors">Datum för 2025 presenterat</h3>
+                        <p class="text-gray-600 mb-4 leading-relaxed">Vi har nu fastställt datum och plats för Islamic Cup 2025. Spara datumet i din kalender!</p>
+                        <a href="#" class="text-yellow-600 font-semibold hover:text-yellow-700 inline-flex items-center group/link">
                             Läs mer
-                            <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <svg class="w-4 h-4 ml-2 group-hover/link:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
                             </svg>
                         </a>
                     </div>
                 </article>
 
-                <!-- News Item 3 -->
-                <article class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow group">
-                    <div class="h-56 bg-gradient-to-br from-emerald-500 to-emerald-700 overflow-hidden">
-                        <div class="w-full h-full flex items-center justify-center bg-emerald-600/50 group-hover:scale-110 transition-transform duration-300">
-                            <svg class="w-20 h-20 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/>
+                <!-- News Item 3 - 2024 höjdpunkter -->
+                <article class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 group transform hover:scale-105">
+                    <div class="relative h-56 overflow-hidden">
+                        <img
+                            src="https://images.unsplash.com/photo-1517649763962-0c623066013b?w=400&h=300&fit=crop&crop=center"
+                            alt="Fotbollslag som firar seger tillsammans"
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                            loading="lazy"
+                        >
+                        <!-- Gradient overlay -->
+                        <div class="absolute inset-0 bg-gradient-to-t from-emerald-900/70 via-emerald-700/20 to-transparent"></div>
+
+                        <!-- Category badge -->
+                        <div class="absolute top-4 left-4 bg-emerald-500/90 backdrop-blur-sm text-white px-3 py-2 rounded-full text-sm font-medium">
+                            Höjdpunkter
+                        </div>
+
+                        <!-- Date badge -->
+                        <div class="absolute bottom-4 right-4 bg-white/20 backdrop-blur-sm text-white px-3 py-1 rounded-lg text-xs font-medium">
+                            5 Jan 2025
+                        </div>
+
+                        <!-- Video play indicator -->
+                        <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-16 h-16 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
+                            <svg class="w-6 h-6 text-white ml-1" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M8 5v14l11-7z"/>
                             </svg>
                         </div>
                     </div>
                     <div class="p-6">
                         <span class="text-sm text-emerald-600 font-semibold">5 Januari 2025</span>
-                        <h3 class="text-xl font-bold text-gray-900 mt-2 mb-3">2024 års höjdpunkter</h3>
-                        <p class="text-gray-600 mb-4">Se tillbaka på förra årets fantastiska evenemang och alla minnesvärda ögonblick.</p>
-                        <a href="#" class="text-emerald-600 font-semibold hover:text-emerald-700 inline-flex items-center">
+                        <h3 class="text-xl font-bold text-gray-900 mt-2 mb-3 group-hover:text-emerald-600 transition-colors">2024 års höjdpunkter</h3>
+                        <p class="text-gray-600 mb-4 leading-relaxed">Se tillbaka på förra årets fantastiska evenemang och alla minnesvärda ögonblick som skapades.</p>
+                        <a href="#" class="text-emerald-600 font-semibold hover:text-emerald-700 inline-flex items-center group/link">
                             Läs mer
-                            <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <svg class="w-4 h-4 ml-2 group-hover/link:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
                             </svg>
                         </a>
@@ -706,8 +929,12 @@
             </div>
 
             <div class="text-center mt-12">
-                <a href="#" class="inline-block px-8 py-4 bg-emerald-600 hover:bg-emerald-700 text-white font-semibold rounded-full transition-all transform hover:scale-105 shadow-lg">
+                <a href="#" class="group relative inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-emerald-600 to-emerald-700 hover:from-emerald-700 hover:to-emerald-800 text-white font-semibold rounded-2xl transition-all duration-300 transform hover:scale-105 shadow-lg">
+                    <svg class="w-5 h-5 mr-2 group-hover:rotate-12 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9.5a2.5 2.5 0 00-2.5-2.5H15"/>
+                    </svg>
                     Se alla nyheter
+                    <div class="absolute inset-0 bg-white/20 rounded-2xl transform scale-95 group-hover:scale-100 transition-transform opacity-0 group-hover:opacity-100"></div>
                 </a>
             </div>
         </div>
@@ -738,107 +965,247 @@
     </section>
 
     <!-- Kontakt Section -->
-    <section id="kontakt" class="py-20 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-                    Kontakta <span class="text-emerald-600">Oss</span>
+    <section id="kontakt" class="py-20 bg-gradient-to-br from-gray-50 via-white to-emerald-50/30 relative overflow-hidden">
+        <!-- Decorative background pattern -->
+        <div class="absolute inset-0 opacity-5">
+            <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <pattern id="contact-pattern" x="0" y="0" width="120" height="120" patternUnits="userSpaceOnUse">
+                        <circle cx="60" cy="30" r="12" fill="currentColor"/>
+                        <rect x="45" y="75" width="30" height="30" rx="6" fill="currentColor"/>
+                        <path d="M30 90 L90 90" stroke="currentColor" stroke-width="2"/>
+                    </pattern>
+                </defs>
+                <rect width="100%" height="100%" fill="url(#contact-pattern)" class="text-emerald-600"/>
+            </svg>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+            <div class="text-center mb-20">
+                <!-- Decorative elements -->
+                <div class="inline-flex items-center space-x-3 mb-6">
+                    <div class="w-12 h-0.5 bg-emerald-600"></div>
+                    <div class="w-3 h-3 bg-yellow-400 rounded-full"></div>
+                    <div class="w-12 h-0.5 bg-emerald-600"></div>
+                </div>
+
+                <h2 class="text-4xl md:text-6xl font-bold text-gray-900 mb-4">
+                <span class="block text-2xl md:text-3xl text-emerald-600 font-normal mb-2">
+                    Vi finns här för dig
+                </span>
+                    Kontakta <span class="text-emerald-600 relative inline-block">
+                    Oss
+                    <svg class="absolute -bottom-2 left-0 w-full h-4 text-emerald-600/40" viewBox="0 0 200 20" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0 12 Q50 6 100 10 T200 8" stroke="currentColor" stroke-width="3" fill="none"/>
+                    </svg>
+                </span>
                 </h2>
-                <div class="w-24 h-1 bg-emerald-600 mx-auto mb-6"></div>
-                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-                    Har du frågor? Vi hjälper dig gärna!
+
+                <p class="text-xl md:text-2xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
+                    Har du frågor om <span class="text-emerald-600 font-semibold">turneringen</span>,
+                    <span class="text-emerald-600 font-semibold">aktiviteterna</span> eller vill
+                    <span class="text-emerald-600 font-semibold">anmäla ditt lag</span>?
                 </p>
             </div>
 
-            <div class="grid md:grid-cols-2 gap-12 items-start">
-                <div>
-                    <h3 class="text-2xl font-bold text-gray-900 mb-6">Skicka ett meddelande</h3>
+            <div class="grid lg:grid-cols-12 gap-16 items-start">
 
-                    <form class="space-y-6">
-                        <div>
-                            <label for="name" class="block text-sm font-medium text-gray-700 mb-2">Namn</label>
-                            <input type="text" id="name" name="name" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-600 focus:border-transparent" required>
+                <!-- Vänster kolumn - Kontaktformulär -->
+                <div class="lg:col-span-7 order-2 lg:order-1">
+                    <div class="bg-white rounded-3xl shadow-2xl p-8 lg:p-12 relative">
+                        <!-- Decorative corner -->
+                        <div class="absolute top-0 right-0 w-20 h-20 bg-gradient-to-br from-emerald-500 to-emerald-600 rounded-bl-3xl rounded-tr-3xl opacity-10"></div>
+
+                        <div class="inline-flex items-center space-x-2 bg-emerald-50 border border-emerald-200 rounded-full px-4 py-2 mb-8">
+                            <div class="w-2 h-2 bg-emerald-500 rounded-full animate-pulse"></div>
+                            <span class="text-emerald-700 font-medium">Vi svarar inom 24 timmar</span>
                         </div>
 
-                        <div>
-                            <label for="email" class="block text-sm font-medium text-gray-700 mb-2">E-post</label>
-                            <input type="email" id="email" name="email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-600 focus:border-transparent" required>
-                        </div>
+                        <h3 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-8">
+                            Skicka ett <span class="text-emerald-600">meddelande</span>
+                        </h3>
 
-                        <div>
-                            <label for="subject" class="block text-sm font-medium text-gray-700 mb-2">Ämne</label>
-                            <input type="text" id="subject" name="subject" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-600 focus:border-transparent" required>
-                        </div>
+                        <form class="space-y-8">
+                            <div class="grid md:grid-cols-2 gap-6">
+                                <div class="group">
+                                    <label for="name" class="block text-sm font-semibold text-gray-700 mb-3">Namn *</label>
+                                    <input
+                                        type="text"
+                                        id="name"
+                                        name="name"
+                                        class="w-full px-6 py-4 border-2 border-gray-200 rounded-2xl focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 transition-all duration-300 group-hover:border-gray-300"
+                                        placeholder="Ditt fullständiga namn"
+                                        required
+                                    >
+                                </div>
+                                <div class="group">
+                                    <label for="email" class="block text-sm font-semibold text-gray-700 mb-3">E-post *</label>
+                                    <input
+                                        type="email"
+                                        id="email"
+                                        name="email"
+                                        class="w-full px-6 py-4 border-2 border-gray-200 rounded-2xl focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 transition-all duration-300 group-hover:border-gray-300"
+                                        placeholder="din@email.com"
+                                        required
+                                    >
+                                </div>
+                            </div>
 
-                        <div>
-                            <label for="message" class="block text-sm font-medium text-gray-700 mb-2">Meddelande</label>
-                            <textarea id="message" name="message" rows="5" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-600 focus:border-transparent" required></textarea>
-                        </div>
+                            <div class="group">
+                                <label for="subject" class="block text-sm font-semibold text-gray-700 mb-3">Ämne *</label>
+                                <select
+                                    id="subject"
+                                    name="subject"
+                                    class="w-full px-6 py-4 border-2 border-gray-200 rounded-2xl focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 transition-all duration-300 group-hover:border-gray-300"
+                                    required
+                                >
+                                    <option value="">Välj ämne...</option>
+                                    <option value="anmalan">Anmälan av lag</option>
+                                    <option value="aktiviteter">Frågor om aktiviteter</option>
+                                    <option value="forelasningar">Föreläsningar</option>
+                                    <option value="sponsring">Sponsring & partnerskap</option>
+                                    <option value="media">Media & press</option>
+                                    <option value="ovrigt">Övrigt</option>
+                                </select>
+                            </div>
 
-                        <button type="submit" class="w-full px-8 py-4 bg-emerald-600 hover:bg-emerald-700 text-white font-semibold rounded-full transition-all transform hover:scale-105 shadow-lg">
-                            Skicka meddelande
-                        </button>
-                    </form>
+                            <div class="group">
+                                <label for="message" class="block text-sm font-semibold text-gray-700 mb-3">Meddelande *</label>
+                                <textarea
+                                    id="message"
+                                    name="message"
+                                    rows="6"
+                                    class="w-full px-6 py-4 border-2 border-gray-200 rounded-2xl focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 transition-all duration-300 group-hover:border-gray-300 resize-none"
+                                    placeholder="Berätta mer om ditt meddelande eller dina frågor..."
+                                    required
+                                ></textarea>
+                            </div>
+
+                            <button type="submit" class="group relative w-full px-8 py-5 bg-gradient-to-r from-emerald-600 to-emerald-700 hover:from-emerald-700 hover:to-emerald-800 text-white font-bold rounded-2xl transition-all duration-300 transform hover:scale-105 shadow-2xl">
+                                <div class="flex items-center justify-center space-x-3">
+                                    <svg class="w-6 h-6 group-hover:rotate-12 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"/>
+                                    </svg>
+                                    <span>Skicka meddelande</span>
+                                </div>
+                                <div class="absolute inset-0 bg-white/20 rounded-2xl transform scale-95 group-hover:scale-100 transition-transform opacity-0 group-hover:opacity-100"></div>
+                            </button>
+                        </form>
+                    </div>
                 </div>
 
-                <div>
-                    <h3 class="text-2xl font-bold text-gray-900 mb-6">Kontaktinformation</h3>
+                <!-- Höger kolumn - Kontaktinformation -->
+                <div class="lg:col-span-5 order-1 lg:order-2">
+                    <div class="sticky top-8">
+                        <h3 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-8">
+                            Kontakt<span class="text-emerald-600">information</span>
+                        </h3>
 
-                    <div class="space-y-6">
-                        <div class="flex items-start space-x-4 p-6 bg-gradient-to-br from-emerald-50 to-white rounded-xl">
-                            <div class="w-12 h-12 bg-emerald-600 rounded-full flex items-center justify-center flex-shrink-0">
-                                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
-                                </svg>
+                        <div class="space-y-6 mb-12">
+                            <!-- E-post -->
+                            <div class="group flex items-start space-x-4 p-6 bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105 border border-emerald-100/50">
+                                <div class="w-14 h-14 bg-gradient-to-br from-emerald-500 to-emerald-600 rounded-2xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform shadow-lg">
+                                    <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h4 class="text-xl font-bold text-gray-900 mb-2 group-hover:text-emerald-600 transition-colors">E-post</h4>
+                                    <a href="mailto:info@islamiccup.se" class="text-gray-600 hover:text-emerald-600 font-medium transition-colors">info@islamiccup.se</a>
+                                    <p class="text-sm text-gray-500 mt-1">Vi svarar inom 24 timmar</p>
+                                </div>
                             </div>
-                            <div>
-                                <h4 class="font-semibold text-gray-900 mb-1">E-post</h4>
-                                <p class="text-gray-600">info@islamiccup.se</p>
-                            </div>
-                        </div>
 
-                        <div class="flex items-start space-x-4 p-6 bg-gradient-to-br from-yellow-50 to-white rounded-xl">
-                            <div class="w-12 h-12 bg-yellow-500 rounded-full flex items-center justify-center flex-shrink-0">
-                                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
-                                </svg>
+                            <!-- Telefon -->
+                            <div class="group flex items-start space-x-4 p-6 bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105 border border-yellow-100/50">
+                                <div class="w-14 h-14 bg-gradient-to-br from-yellow-400 to-yellow-500 rounded-2xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform shadow-lg">
+                                    <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h4 class="text-xl font-bold text-gray-900 mb-2 group-hover:text-yellow-600 transition-colors">Telefon</h4>
+                                    <a href="tel:+46123456789" class="text-gray-600 hover:text-yellow-600 font-medium transition-colors">+46 12 345 67 89</a>
+                                    <p class="text-sm text-gray-500 mt-1">Vardagar 10:00-18:00</p>
+                                </div>
                             </div>
-                            <div>
-                                <h4 class="font-semibold text-gray-900 mb-1">Telefon</h4>
-                                <p class="text-gray-600">+46 XX XXX XX XX</p>
-                            </div>
-                        </div>
 
-                        <div class="flex items-start space-x-4 p-6 bg-gradient-to-br from-emerald-50 to-white rounded-xl">
-                            <div class="w-12 h-12 bg-emerald-600 rounded-full flex items-center justify-center flex-shrink-0">
-                                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
-                                </svg>
+                            <!-- Plats -->
+                            <div class="group flex items-start space-x-4 p-6 bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105 border border-emerald-100/50">
+                                <div class="w-14 h-14 bg-gradient-to-br from-emerald-500 to-emerald-600 rounded-2xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform shadow-lg">
+                                    <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h4 class="text-xl font-bold text-gray-900 mb-2 group-hover:text-emerald-600 transition-colors">Plats</h4>
+                                    <p class="text-gray-600">Sverige</p>
+                                    <p class="text-sm text-gray-500 mt-1">Vi täcker hela landet</p>
+                                </div>
                             </div>
-                            <div>
-                                <h4 class="font-semibold text-gray-900 mb-1">Plats</h4>
-                                <p class="text-gray-600">Sverige</p>
-                            </div>
-                        </div>
 
-                        <div class="flex items-start space-x-4 p-6 bg-gradient-to-br from-yellow-50 to-white rounded-xl">
-                            <div class="w-12 h-12 bg-yellow-500 rounded-full flex items-center justify-center flex-shrink-0">
-                                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/>
-                                </svg>
-                            </div>
-                            <div>
-                                <h4 class="font-semibold text-gray-900 mb-1">Sociala Medier</h4>
-                                <div class="flex space-x-3 mt-2">
-                                    <a href="#" class="text-emerald-600 hover:text-emerald-700">Facebook</a>
-                                    <span class="text-gray-400">•</span>
-                                    <a href="#" class="text-emerald-600 hover:text-emerald-700">Instagram</a>
+                            <!-- Sociala Medier -->
+                            <div class="group flex items-start space-x-4 p-6 bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105 border border-yellow-100/50">
+                                <div class="w-14 h-14 bg-gradient-to-br from-yellow-400 to-yellow-500 rounded-2xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform shadow-lg">
+                                    <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h4 class="text-xl font-bold text-gray-900 mb-2 group-hover:text-yellow-600 transition-colors">Följ oss</h4>
+                                    <div class="flex items-center space-x-4 mt-3">
+                                        <a href="#" class="flex items-center space-x-2 text-gray-600 hover:text-blue-600 transition-colors">
+                                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                                <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/>
+                                            </svg>
+                                            <span class="text-sm font-medium">Twitter</span>
+                                        </a>
+                                        <a href="#" class="flex items-center space-x-2 text-gray-600 hover:text-blue-500 transition-colors">
+                                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                                            </svg>
+                                            <span class="text-sm font-medium">Facebook</span>
+                                        </a>
+                                        <a href="#" class="flex items-center space-x-2 text-gray-600 hover:text-pink-600 transition-colors">
+                                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                                <path d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 5.079 3.158 9.417 7.618 11.174-.105-.949-.199-2.403.041-3.439.219-.937 1.406-5.957 1.406-5.957s-.359-.72-.359-1.781c0-1.663.967-2.911 2.168-2.911 1.024 0 1.518.769 1.518 1.688 0 1.029-.653 2.567-.992 3.992-.285 1.193.6 2.165 1.775 2.165 2.128 0 3.768-2.245 3.768-5.487 0-2.861-2.063-4.869-5.008-4.869-3.41 0-5.409 2.562-5.409 5.199 0 1.033.394 2.143.889 2.739.099.12.112.225.085.345-.09.375-.293 1.199-.334 1.363-.053.225-.172.271-.402.165-1.495-.69-2.433-2.878-2.433-4.646 0-3.776 2.748-7.252 7.92-7.252 4.158 0 7.392 2.967 7.392 6.923 0 4.135-2.607 7.462-6.233 7.462-1.214 0-2.357-.629-2.750-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146C9.57 23.812 10.763 24.009 12.017 24.009c6.624 0 11.99-5.367 11.99-11.987C24.007 5.367 18.641.001 12.017.001z"/>
+                                            </svg>
+                                            <span class="text-sm font-medium">Instagram</span>
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
+
+                        <!-- FAQ Button -->
+                        <div class="text-center">
+                            <a href="#" class="inline-flex items-center space-x-2 text-emerald-600 hover:text-emerald-700 font-semibold transition-colors">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                </svg>
+                                <span>Vanliga frågor & svar</span>
+                            </a>
+                        </div>
                     </div>
                 </div>
+            </div>
+
+            <!-- Bottom CTA -->
+            <div class="mt-20 text-center">
+                <div class="inline-flex items-center space-x-2 bg-yellow-50 border border-yellow-200 rounded-full px-6 py-3 mb-6">
+                    <div class="w-2 h-2 bg-yellow-500 rounded-full animate-pulse"></div>
+                    <span class="text-yellow-700 font-medium">Behöver du hjälp med anmälan?</span>
+                </div>
+                <p class="text-gray-600 max-w-2xl mx-auto mb-6">
+                    Vi hjälper gärna till med allt från anmälan av lag till frågor om aktiviteter och boende.
+                </p>
+                <a href="tel:+46123456789" class="group inline-flex items-center space-x-2 px-6 py-3 bg-yellow-400 hover:bg-yellow-500 text-gray-900 font-semibold rounded-2xl transition-all duration-300 transform hover:scale-105 shadow-lg">
+                    <svg class="w-5 h-5 group-hover:rotate-12 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+                    </svg>
+                    <span>Ring oss direkt</span>
+                </a>
             </div>
         </div>
     </section>
@@ -895,6 +1262,15 @@
             }
         }
 
+        @keyframes fade-in {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
         .animate-fade-in-up {
             animation: fade-in-up 1s ease-out;
         }
@@ -909,6 +1285,14 @@
 
         .animate-spin-very-slow {
             animation: spin-very-slow 30s linear infinite;
+        }
+
+        .animate-float {
+            animation: float 3s ease-in-out infinite;
+        }
+
+        .animate-fade-in {
+            animation: fade-in 0.5s ease-out;
         }
 
         html {
@@ -927,4 +1311,21 @@
 
 @push('scripts')
     <script src="//unpkg.com/alpinejs" defer></script>
+    <script>
+        function playVideo(element) {
+            const thumbnail = element.querySelector('.absolute.inset-0.bg-gradient-to-br');
+            const iframe = element.querySelector('iframe');
+
+            // Fade out thumbnail
+            thumbnail.style.transition = 'opacity 0.3s ease-out';
+            thumbnail.style.opacity = '0';
+
+            setTimeout(() => {
+                // Hide thumbnail and show video
+                thumbnail.style.display = 'none';
+                iframe.classList.remove('hidden');
+                iframe.classList.add('animate-fade-in');
+            }, 300);
+        }
+    </script>
 @endpush
