@@ -35,7 +35,7 @@
         </div>
 
         <!-- Hero Content -->
-        <div class="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 sm:py-24">
+        <div class="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 sm:pt-0">
             <div class="grid lg:grid-cols-12 gap-8 items-center min-h-[500px]">
 
                 <!-- Left Column - Main Content -->
