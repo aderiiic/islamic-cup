@@ -6,7 +6,7 @@
 @section('content')
 
     <!-- Hero Section -->
-    <section class="relative h-screen min-h-[700px] flex items-center justify-center overflow-hidden sm:py-24 py-16">
+    <section class="relative h-screen min-h-[700px] flex items-center justify-center overflow-hidden">
         <!-- Animated Background Elements -->
         <div class="absolute inset-0 z-0">
             <!-- Primary Background -->
@@ -35,7 +35,7 @@
         </div>
 
         <!-- Hero Content -->
-        <div class="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 sm:py-24">
             <div class="grid lg:grid-cols-12 gap-8 items-center min-h-[500px]">
 
                 <!-- Left Column - Main Content -->
