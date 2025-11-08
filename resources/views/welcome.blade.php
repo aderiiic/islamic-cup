@@ -6,7 +6,7 @@
 @section('content')
 
     <!-- Hero Section -->
-    <section class="relative h-screen min-h-[700px] flex items-center justify-center overflow-hidden">
+    <section class="relative h-screen min-h-[700px] flex items-center justify-center overflow-hidden pt-24 sm:pt-0">
         <!-- Animated Background Elements -->
         <div class="absolute inset-0 z-0">
             <!-- Primary Background -->
