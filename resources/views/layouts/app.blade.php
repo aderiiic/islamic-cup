@@ -8,6 +8,10 @@
     <title>@yield('title', 'Islamic Cup 2025 - Förena Muslimer Genom Idrott')</title>
     <meta name="description" content="@yield('description', 'Islamic Cup är en årlig futsal-turnering som förenar muslimer och moskéer i Sverige genom idrott, föreläsningar och familjeaktiviteter.')">
 
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="https://isc-uddevalla.se/wp-content/uploads/2025/11/islamiccup-fav.png">
+    <link rel="shortcut icon" type="image/png" href="https://isc-uddevalla.se/wp-content/uploads/2025/11/islamiccup-fav.png">
+
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.bunny.net">
     <link href="https://fonts.bunny.net/css?family=instrument-sans:400,500,600,700" rel="stylesheet" />
@@ -56,11 +60,6 @@
                     <div class="absolute inset-0 bg-gradient-to-r from-emerald-500/10 to-emerald-600/10 rounded-xl scale-0 group-hover:scale-100 transition-transform duration-300"></div>
                 </a>
 
-                <a href="{{ route('schedule') }}" class="group relative px-4 py-2 text-gray-700 hover:text-emerald-600 font-medium transition-all duration-300 rounded-xl hover:bg-emerald-50/50">
-                    <span class="relative z-10">Islamic Cup 2025</span>
-                    <div class="absolute inset-0 bg-gradient-to-r from-emerald-500/10 to-emerald-600/10 rounded-xl scale-0 group-hover:scale-100 transition-transform duration-300"></div>
-                </a>
-
                 <a href="#aktiviteter" class="group relative px-4 py-2 text-gray-700 hover:text-emerald-600 font-medium transition-all duration-300 rounded-xl hover:bg-emerald-50/50">
                     <span class="relative z-10">Aktiviteter</span>
                     <div class="absolute inset-0 bg-gradient-to-r from-emerald-500/10 to-emerald-600/10 rounded-xl scale-0 group-hover:scale-100 transition-transform duration-300"></div>
@@ -90,25 +89,20 @@
                             </span>
                             <div class="absolute inset-0 bg-white/20 rounded-2xl scale-90 group-hover:scale-100 opacity-0 group-hover:opacity-100 transition-all duration-300"></div>
                         </a>
-                    @else
-                        <a href="{{ route('login') }}" class="group relative px-4 py-2 text-gray-700 hover:text-emerald-600 font-medium transition-all duration-300 rounded-xl hover:bg-emerald-50/50">
-                            <span class="relative z-10">Logga in</span>
-                            <div class="absolute inset-0 bg-gradient-to-r from-emerald-500/10 to-emerald-600/10 rounded-xl scale-0 group-hover:scale-100 transition-transform duration-300"></div>
-                        </a>
-
-                        @if (Route::has('register'))
-                            <a href="{{ route('register') }}" class="group relative px-6 py-3 bg-gradient-to-r from-yellow-400 to-yellow-500 hover:from-yellow-500 hover:to-yellow-600 text-gray-900 rounded-2xl font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl ml-4">
-                                <span class="relative z-10 flex items-center space-x-2">
-                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18 9v3m0 0v3m0-3h3m-3 0h-3m-2-5a4 4 0 11-8 0 4 4 0 018 0zM3 20a6 6 0 0112 0v1H3v-1z"/>
-                                    </svg>
-                                    <span>Registrera</span>
-                                </span>
-                                <div class="absolute inset-0 bg-white/30 rounded-2xl scale-90 group-hover:scale-100 opacity-0 group-hover:opacity-100 transition-all duration-300"></div>
-                            </a>
-                        @endif
                     @endauth
                 @endif
+
+                <a href="{{ route('schedule') }}" class="group relative px-6 py-3 bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-600 hover:from-yellow-500 hover:via-yellow-600 hover:to-yellow-700 text-gray-900 rounded-2xl font-bold transition-all duration-300 transform hover:scale-110 shadow-xl hover:shadow-2xl ml-2 border-2 border-yellow-600/20">
+                        <span class="relative z-10 flex items-center space-x-2">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+                            </svg>
+                            <span>Islamic Cup 2025</span>
+                        </span>
+                    <div class="absolute inset-0 bg-white/40 rounded-2xl scale-95 group-hover:scale-100 opacity-0 group-hover:opacity-100 transition-all duration-300"></div>
+                    <!-- Pulsating ring -->
+                    <div class="absolute -inset-1 bg-gradient-to-r from-yellow-400 to-yellow-600 rounded-2xl opacity-30 blur group-hover:opacity-50 transition-opacity animate-pulse"></div>
+                </a>
             </div>
 
             <!-- Enhanced Mobile Menu Button -->
@@ -189,11 +183,6 @@
                 <span>Turnering</span>
             </a>
 
-            <a href="{{ route('schedule') }}" class="group flex items-center space-x-3 px-4 py-4 text-gray-700 hover:text-emerald-600 font-medium rounded-2xl hover:bg-emerald-50/50 transition-all duration-300">
-                <div class="w-2 h-2 bg-emerald-400 rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></div>
-                <span>Islamic Cup 2025</span>
-            </a>
-
             <a href="#aktiviteter" class="group flex items-center space-x-3 px-4 py-4 text-gray-700 hover:text-emerald-600 font-medium rounded-2xl hover:bg-emerald-50/50 transition-all duration-300">
                 <div class="w-2 h-2 bg-emerald-400 rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></div>
                 <span>Aktiviteter</span>
@@ -218,6 +207,13 @@
                 <div class="flex-1 h-px bg-gradient-to-r from-transparent via-gray-300 to-transparent"></div>
             </div>
 
+            <a href="{{ route('schedule') }}" class="group flex items-center justify-center space-x-2 px-6 py-4 bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-600 hover:from-yellow-500 hover:via-yellow-600 hover:to-yellow-700 text-gray-900 rounded-2xl font-bold transition-all duration-300 transform hover:scale-105 shadow-xl border-2 border-yellow-600/20">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+                </svg>
+                <span>Islamic Cup 2025</span>
+            </a>
+
             <!-- Auth buttons -->
             @if (Route::has('login'))
                 @auth
@@ -227,20 +223,6 @@
                         </svg>
                         <span>Dashboard</span>
                     </a>
-                @else
-                    <a href="{{ route('login') }}" class="group relative px-4 py-2 text-gray-700 hover:text-emerald-600 font-medium transition-all duration-300 rounded-xl hover:bg-emerald-50/50">
-                        <span class="relative z-10">Logga in</span>
-                        <div class="absolute inset-0 bg-gradient-to-r from-emerald-500/10 to-emerald-600/10 rounded-xl scale-0 group-hover:scale-100 transition-transform duration-300"></div>
-                    </a>
-
-                    @if (Route::has('register'))
-                        <a href="{{ route('register') }}" class="group flex items-center justify-center space-x-2 px-6 py-4 bg-gradient-to-r from-yellow-400 to-yellow-500 hover:from-yellow-500 hover:to-yellow-600 text-gray-900 rounded-2xl font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg mt-2">
-                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18 9v3m0 0v3m0-3h3m-3 0h-3m-2-5a4 4 0 11-8 0 4 4 0 018 0zM3 20a6 6 0 0112 0v1H3v-1z"/>
-                            </svg>
-                            <span>Registrera</span>
-                        </a>
-                    @endif
                 @endauth
             @endif
         </div>
@@ -276,7 +258,11 @@
             <a href="#aktiviteter" class="text-gray-300 hover:text-emerald-400 transition-colors">Aktiviteter</a>
             <a href="#nyheter" class="text-gray-300 hover:text-emerald-400 transition-colors">Nyheter</a>
             <a href="#sponsorer" class="text-gray-300 hover:text-emerald-400 transition-colors">Sponsorer</a>
-            <a href="mailto:info@islamiccup.se" class="text-gray-300 hover:text-emerald-400 transition-colors">Kontakt</a>
+            @if (Route::has('login'))
+                @guest
+                    <a href="{{ route('login') }}" class="text-gray-400 hover:text-emerald-400 transition-colors">Logga in</a>
+                @endguest
+            @endif
         </div>
 
         <!-- Social Media -->

@@ -846,17 +846,11 @@
                 Anmäl ditt lag nu och var en del av denna fantastiska upplevelse!
             </p>
             <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="{{ url('/') }}#turnering" class="inline-flex items-center justify-center px-8 py-4 bg-white text-emerald-700 rounded-2xl font-bold text-lg shadow-xl hover:shadow-2xl hover:scale-105 transition-all">
+                <a href="{{ url('https://www.instagram.com/p/DQGvsC4iM1i/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==') }}#turnering" class="inline-flex items-center justify-center px-8 py-4 bg-white text-emerald-700 rounded-2xl font-bold text-lg shadow-xl hover:shadow-2xl hover:scale-105 transition-all">
                     <svg class="w-6 h-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
                     </svg>
                     Anmäl ditt lag
-                </a>
-                <a href="mailto:info@islamiccup.se" class="inline-flex items-center justify-center px-8 py-4 bg-emerald-800/50 backdrop-blur-sm text-white border-2 border-white/30 rounded-2xl font-bold text-lg hover:bg-emerald-800/70 transition-all">
-                    <svg class="w-6 h-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
-                    </svg>
-                    Kontakta oss
                 </a>
             </div>
         </div>
