@@ -25,6 +25,9 @@ Route::get('/login', LoginForm::class)->name('login');
 Route::get('/match/{match}', \App\Livewire\Public\MatchTicker::class)->name('match.ticker');
 Route::get('/nyheter', \App\Livewire\Public\NewsIndex::class)->name('news.index');
 Route::get('/nyheter/{slug}', \App\Livewire\Public\NewsShow::class)->name('news.show');
+Route::get('/schema', function () {
+    return view('schedule');
+})->name('schedule');
 
 // Skyddade rutter
 Route::middleware('auth')->group(function () {

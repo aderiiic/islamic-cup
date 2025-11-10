@@ -56,6 +56,11 @@
                     <div class="absolute inset-0 bg-gradient-to-r from-emerald-500/10 to-emerald-600/10 rounded-xl scale-0 group-hover:scale-100 transition-transform duration-300"></div>
                 </a>
 
+                <a href="{{ route('schedule') }}" class="group relative px-4 py-2 text-gray-700 hover:text-emerald-600 font-medium transition-all duration-300 rounded-xl hover:bg-emerald-50/50">
+                    <span class="relative z-10">Islamic Cup 2025</span>
+                    <div class="absolute inset-0 bg-gradient-to-r from-emerald-500/10 to-emerald-600/10 rounded-xl scale-0 group-hover:scale-100 transition-transform duration-300"></div>
+                </a>
+
                 <a href="#aktiviteter" class="group relative px-4 py-2 text-gray-700 hover:text-emerald-600 font-medium transition-all duration-300 rounded-xl hover:bg-emerald-50/50">
                     <span class="relative z-10">Aktiviteter</span>
                     <div class="absolute inset-0 bg-gradient-to-r from-emerald-500/10 to-emerald-600/10 rounded-xl scale-0 group-hover:scale-100 transition-transform duration-300"></div>
@@ -182,6 +187,11 @@
             <a href="#turnering" class="group flex items-center space-x-3 px-4 py-4 text-gray-700 hover:text-emerald-600 font-medium rounded-2xl hover:bg-emerald-50/50 transition-all duration-300">
                 <div class="w-2 h-2 bg-emerald-400 rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></div>
                 <span>Turnering</span>
+            </a>
+
+            <a href="{{ route('schedule') }}" class="group flex items-center space-x-3 px-4 py-4 text-gray-700 hover:text-emerald-600 font-medium rounded-2xl hover:bg-emerald-50/50 transition-all duration-300">
+                <div class="w-2 h-2 bg-emerald-400 rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                <span>Islamic Cup 2025</span>
             </a>
 
             <a href="#aktiviteter" class="group flex items-center space-x-3 px-4 py-4 text-gray-700 hover:text-emerald-600 font-medium rounded-2xl hover:bg-emerald-50/50 transition-all duration-300">
