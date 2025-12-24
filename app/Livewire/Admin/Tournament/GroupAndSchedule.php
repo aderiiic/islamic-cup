@@ -96,7 +96,7 @@ class GroupAndSchedule extends Component
             'match_type' => 'required|in:group,quarter_final,semi_final,final,third_place',
             'scheduled_at' => 'required|date',
             'venue' => 'nullable|string|max:255',
-            'duration_minutes' => 'required|integer|min:20|max:120',
+            'duration_minutes' => 'required|integer|min:10|max:120',
         ]);
 
         FootballMatch::create([
