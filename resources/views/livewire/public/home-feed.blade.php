@@ -171,15 +171,15 @@
                                 </div>
                             </div>
 
-                            <div class="flex items-center justify-center space-x-8 mb-8 relative z-10">
+                            <div class="flex items-center justify-center space-x-4 sm:space-x-8 mb-8 relative z-10 px-2">
                                 <div class="text-center flex-1">
                                     <div class="w-20 h-20 bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl mx-auto mb-4"></div>
-                                    <h4 class="font-bold text-lg text-white mb-1">{{ $m->homeTeam->name }}</h4>
-                                    <p class="text-sm text-gray-300">{{ $m->homeTeam->organization }}</p>
+                                    <h4 class="font-bold text-lg text-white mb-1 truncate max-w-[40vw] sm:max-w-none mx-auto">{{ $m->homeTeam->name }}</h4>
+                                    <p class="text-sm text-gray-300 truncate max-w-[50vw] sm:max-w-none mx-auto">{{ $m->homeTeam->organization }}</p>
                                 </div>
                                 <div class="text-center">
-                                    <div class="bg-gradient-to-r from-emerald-500 to-emerald-600 text-white px-8 py-4 rounded-2xl border border-emerald-400/20">
-                                        <div class="text-4xl font-bold">{{ $m->home_score }} - {{ $m->away_score }}</div>
+                                    <div class="bg-gradient-to-r from-emerald-500 to-emerald-600 text-white px-5 sm:px-8 py-3 sm:py-4 rounded-2xl border border-emerald-400/20">
+                                        <div class="text-3xl sm:text-4xl font-bold">{{ $m->home_score }} - {{ $m->away_score }}</div>
                                     </div>
                                     <div class="flex items-center justify-center space-x-2 mt-3 text-xs text-gray-400">
                                         <span>HT: {{ $m->home_score_ht }}-{{ $m->away_score_ht }}</span>
@@ -187,8 +187,8 @@
                                 </div>
                                 <div class="text-center flex-1">
                                     <div class="w-20 h-20 bg-gradient-to-br from-green-500 to-green-600 rounded-2xl mx-auto mb-4"></div>
-                                    <h4 class="font-bold text-lg text-white mb-1">{{ $m->awayTeam->name }}</h4>
-                                    <p class="text-sm text-gray-300">{{ $m->awayTeam->organization }}</p>
+                                    <h4 class="font-bold text-lg text-white mb-1 truncate max-w-[40vw] sm:max-w-none mx-auto">{{ $m->awayTeam->name }}</h4>
+                                    <p class="text-sm text-gray-300 truncate max-w-[50vw] sm:max-w-none mx-auto">{{ $m->awayTeam->organization }}</p>
                                 </div>
                             </div>
 
@@ -245,25 +245,25 @@
 
                         <div class="space-y-4">
                             @forelse($upcoming as $m)
-                                <div class="flex items-center justify-between p-4 bg-white/5 rounded-2xl hover:bg-white/10 transition-colors border border-white/5">
-                                    <div class="flex items-center space-x-4">
+                                <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 p-4 bg-white/5 rounded-2xl hover:bg-white/10 transition-colors border border-white/5">
+                                    <div class="flex items-center space-x-4 min-w-0">
                                         <div class="text-center">
                                             <div class="text-sm font-semibold text-white">{{ optional($m->scheduled_at)->format('H:i') }}</div>
                                             <div class="text-xs text-gray-400">{{ $m->venue }}</div>
                                         </div>
-                                        <div class="flex items-center space-x-3">
-                                            <div class="flex items-center space-x-2">
+                                        <div class="flex items-center space-x-3 min-w-0">
+                                            <div class="flex items-center space-x-2 min-w-0">
                                                 <div class="w-8 h-8 bg-gradient-to-br from-purple-500 to-purple-600 rounded-lg"></div>
-                                                <span class="font-medium text-sm text-gray-200">{{ $m->homeTeam->name }}</span>
+                                                <span class="font-medium text-sm text-gray-200 truncate max-w-[40vw] sm:max-w-none">{{ $m->homeTeam->name }}</span>
                                             </div>
                                             <span class="text-gray-500">vs</span>
-                                            <div class="flex items-center space-x-2">
+                                            <div class="flex items-center space-x-2 min-w-0">
                                                 <div class="w-8 h-8 bg-gradient-to-br from-orange-500 to-orange-600 rounded-lg"></div>
-                                                <span class="font-medium text-sm text-gray-200">{{ $m->awayTeam->name }}</span>
+                                                <span class="font-medium text-sm text-gray-200 truncate max-w-[40vw] sm:max-w-none">{{ $m->awayTeam->name }}</span>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="text-xs bg-blue-500/20 text-blue-300 px-3 py-1 rounded-full font-medium border border-blue-400/30">
+                                    <div class="text-xs bg-blue-500/20 text-blue-300 px-3 py-1 rounded-full font-medium border border-blue-400/30 self-start sm:self-auto">
                                         {{ ucfirst(str_replace('_',' ', $m->match_type)) }}
                                     </div>
                                 </div>
@@ -298,11 +298,11 @@
                                             <div class="w-8 h-8 {{ $idx===0?'bg-yellow-500':'bg-gray-600' }} text-white rounded-full flex items-center justify-center font-bold text-sm shadow-lg">
                                                 {{ $idx+1 }}
                                             </div>
-                                            <div class="flex items-center space-x-3">
+                                            <div class="flex items-center space-x-3 min-w-0">
                                                 <div class="w-10 h-10 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl shadow-lg"></div>
                                                 <div>
-                                                    <div class="font-semibold text-white text-sm">{{ $row['team']->name }}</div>
-                                                    <div class="text-xs text-gray-300">{{ $row['team']->organization }}</div>
+                                                    <div class="font-semibold text-white text-sm truncate max-w-[50vw] sm:max-w-none">{{ $row['team']->name }}</div>
+                                                    <div class="text-xs text-gray-300 truncate max-w-[60vw] sm:max-w-none">{{ $row['team']->organization }}</div>
                                                 </div>
                                             </div>
                                         </div>
